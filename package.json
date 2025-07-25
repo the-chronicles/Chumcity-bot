@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "puppeteer install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "post:tmz": "node post-tmz.js",
     "post:buzzfeed": "node post-buzzfeed.js",
@@ -21,6 +20,6 @@
     "cheerio": "^1.1.2",
     "chrome-aws-lambda": "^10.1.0",
     "express": "^5.1.0",
-    "puppeteer-core": "^24.15.0"
+    "puppeteer-core": "^10.4.0"
   }
 }
