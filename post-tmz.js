@@ -1,5 +1,4 @@
-const puppeteer = require("puppeteer-core");
-const chromium = require('chrome-aws-lambda');
+const puppeteer = require("puppeteer");
 const scrapeTMZ = require("./scrapers/tmz");
 
 const username = "tmzcom"; // change if you're using another account

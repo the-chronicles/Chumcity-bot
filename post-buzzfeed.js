@@ -1,5 +1,4 @@
-const puppeteer = require("puppeteer-core");
-const chromium = require('chrome-aws-lambda');
+const puppeteer = require("puppeteer");
 const scrapeBuzzfeed = require("./scrapers/buzzfeed");
 
 const username = "buzzfeedcom"; // update this if you're using a different profile
