@@ -1,11 +1,17 @@
-const puppeteer = require("puppeteer");
+const puppeteer = require("puppeteer-core");
+const chromium = require('chrome-aws-lambda');
 const scrapeTMZ = require("./scrapers/tmz");
 
 const username = "tmzcom"; // change if you're using another account
 const password = "Loving@02";
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: false });
+  // const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({
+  args: chromium.args,
+  executablePath: await chromium.executablePath,
+  headless: chromium.headless,
+});
   const page = await browser.newPage();
 
   try {
