@@ -5,8 +5,12 @@ const username = "buzzfeedcom"; // update this if you're using a different profi
 const password = "Loving@02"; // same here
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: false });
-;
+  // const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({
+  headless: true,
+  args: ["--no-sandbox", "--disable-setuid-sandbox"]
+});
+
   const page = await browser.newPage();
 
   try {
