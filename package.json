@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "post:all": "node post-all.js",
     "start": "node post-tmz.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "post:tmz": "node post-tmz.js",
