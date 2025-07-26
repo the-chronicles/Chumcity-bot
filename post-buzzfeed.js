@@ -5,12 +5,8 @@ const username = "buzzfeedcom"; // update this if you're using a different profi
 const password = "Loving@02"; // same here
 
 (async () => {
-  // const browser = await puppeteer.launch({ headless: false });
-const browser = await puppeteer.launch({
-  args: chromium.args,
-  executablePath: await chromium.executablePath,
-  headless: chromium.headless,
-});
+  const browser = await puppeteer.launch({ headless: false });
+;
   const page = await browser.newPage();
 
   try {
