@@ -5,7 +5,11 @@ const username = "vicecom"; // your Vice profile on ChumCity
 const password = "Loving@02";
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: false });
+  // const browser = await puppeteer.launch({ headless: false });
+const browser = await puppeteer.launch({
+  headless: true,
+  args: ["--no-sandbox", "--disable-setuid-sandbox"]
+});
   const page = await browser.newPage();
 
   try {
